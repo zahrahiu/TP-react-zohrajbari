@@ -1,17 +1,19 @@
 const products = [
   {
     id: 1,
-    name: "1 Million",
+    name: "Chance Chanel",
     price: "950 MAD",
-    description: "Parfum chaud et épicé.",
-    image: "/assets/1 million.png",
+    description: "Parfum féminin, floral et frais.",
+    image: "/assets/Chance Chanel.png",
+    quantity: 5,  
   },
   {
     id: 2,
-    name: "Bleu de Chanel",
+    name: "La Vie est Belle",
     price: "1200 MAD",
-    description: "Parfum frais et boisé.",
-    image: "/assets/bleu de chanel.png",
+    description: "Parfum doux et gourmand.",
+    image: "/assets/La vie est belle.png",
+    quantity: 15,  
   },
 ];
 
