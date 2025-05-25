@@ -1,7 +1,7 @@
 import { useState } from "react";
 import products from "./data/product";
 import ProductList from "./components/ProductList";
-
+import ProductDetails from "./components/ProductDetails";
 
 function Navbar() {
   return (
@@ -37,9 +37,19 @@ function App() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <Navbar /> 
+      <Navbar />
       <h1>Boutique de Parfums</h1>
+
+      {/* ✅ La liste des produits reste affichée */}
       <ProductList products={products} onSelect={setSelectedProduct} />
+
+      {/* ✅ Détails affichés en dessous, si produit sélectionné */}
+      {selectedProduct && (
+        <ProductDetails
+          product={selectedProduct}
+          onBack={() => setSelectedProduct(null)}
+        />
+      )}
     </div>
   );
 }
