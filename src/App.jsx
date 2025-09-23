@@ -22,7 +22,7 @@ function Navbar() {
         zIndex: 100,
       }}
     >
-      <div style={{ cursor: "pointer" }}>🌸 Ma Boutique de Parfums</div>
+      <div style={{ cursor: "pointer" }}>🌸Parfumerie🌸</div>
       <div style={{ display: "flex", gap: "20px", fontWeight: "500", fontSize: "16px" }}>
         <div style={{ cursor: "pointer" }}>Accueil</div>
         <div style={{ cursor: "pointer" }}>Produits</div>
