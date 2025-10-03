@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  docker { 
+            image 'node:20' // Node.js + npm
+            args '-u root:root'
+        }
    environment {
     DOCKER_HUB_CREDENTIALS = credentials('docker-hub-creds')
   }
