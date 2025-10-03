@@ -11,23 +11,23 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
         stage('Build App') {
             steps {
-                bat 'npm run build'
+                sh 'npm run build'
             }
         }
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t zahrajbari/react-app:latest .'
+                sh 'docker build -t zahrajbari/react-app:latest .'
             }
         }
         stage('Push to Docker Hub') {
             steps {
-                bat 'echo %DOCKER_HUB_CREDENTIALS_PSW% | docker login -u %DOCKER_HUB_CREDENTIALS_USR% --password-stdin'
-                bat 'docker push zahrajbari/react-app:latest'
+                sh 'echo %DOCKER_HUB_CREDENTIALS_PSW% | docker login -u %DOCKER_HUB_CREDENTIALS_USR% --password-stdin'
+                sh 'docker push zahrajbari/react-app:latest'
             }
         }
     }
